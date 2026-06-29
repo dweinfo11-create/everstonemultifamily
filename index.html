@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Everstone Capital — Multifamily Value-Add Investing&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>* { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>a { color: inherit; text-decoration: none; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* NAV */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; background: #fff; z-index: 100; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-logo { font-size: 15px; font-weight: 600; letter-spacing: 0.04em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-links { display: flex; gap: 2rem; font-size: 13px; color: #666; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-links a:hover { color: #1a1a1a; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.nav-cta { background: #1a1a1a; color: #fff; padding: 8px 20px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; border: none; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* HERO */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero { padding: 6rem 2.5rem 5rem; max-width: 900px; margin: 0 auto; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-badge { display: inline-block; background: #f0f4ff; color: #3b5bdb; font-size: 11px; padding: 5px 14px; border-radius: 20px; margin-bottom: 2rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero h1 { font-size: 42px; font-weight: 600; line-height: 1.15; margin-bottom: 1.5rem; color: #0f0f0f; max-width: 700px; margin-left: auto; margin-right: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero p { font-size: 17px; color: #555; max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.75; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-dark { background: #1a1a1a; color: #fff; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; border: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-outline { background: transparent; color: #1a1a1a; border: 1px solid #d0d0d0; padding: 12px 28px; border-radius: 8px; font-size: 14px; cursor: pointer; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* METRICS STRIP */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metrics-strip { background: #0f0f0f; padding: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2rem; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric-item .value { font-size: 32px; font-weight: 600; color: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric-item .label { font-size: 12px; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* SECTIONS */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-tag { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section h2 { font-size: 28px; font-weight: 600; color: #0f0f0f; margin-bottom: 1rem; max-width: 600px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section p { font-size: 15px; color: #555; line-height: 1.75; max-width: 620px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.divider { border: none; border-top: 1px solid #f0f0f0; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* PROCESS */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.process-card { background: #f9f9f9; border-radius: 12px; padding: 1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.process-num { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.process-title { font-size: 15px; font-weight: 600; color: #0f0f0f; margin-bottom: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.process-text { font-size: 13px; color: #666; line-height: 1.65; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* CRITERIA */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-card { border: 1px solid #e8e8e8; border-radius: 10px; padding: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-value { font-size: 14px; font-weight: 600; color: #0f0f0f; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* DEALS */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-card { border: 1px solid #e8e8e8; border-radius: 14px; padding: 1.5rem; transition: box-shadow 0.2s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-card.featured { border-color: #3b5bdb; border-width: 2px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-name { font-size: 16px; font-weight: 600; color: #0f0f0f; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-loc { font-size: 12px; color: #888; margin-top: 3px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; background: #f0f4ff; color: #3b5bdb; font-weight: 500; white-space: nowrap; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-desc { font-size: 13px; color: #666; line-height: 1.65; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.deal-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 1.25rem; border-top: 1px solid #f0f0f0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.stat-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.04em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.stat-value { font-size: 15px; font-weight: 600; color: #0f0f0f; margin-top: 2px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#deals-loading { text-align: center; padding: 2rem; color: #888; font-size: 14px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ABOUT */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-card { background: #f9f9f9; border-radius: 16px; padding: 2.5rem; margin-top: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-text { font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 1rem; max-width: 680px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillar { border-left: 3px solid #3b5bdb; padding-left: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillar-title { font-size: 14px; font-weight: 600; color: #0f0f0f; margin-bottom: 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.pillar-text { font-size: 13px; color: #666; line-height: 1.6; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* FORM */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-section { background: #0f0f0f; padding: 5rem 2.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-inner { max-width: 560px; margin: 0 auto; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-tag { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-section h2 { font-size: 28px; font-weight: 600; color: #fff; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-subtitle { font-size: 15px; color: #888; margin-bottom: 2.5rem; line-height: 1.7; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-group { margin-bottom: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-group label { font-size: 12px; color: #888; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-group input, .form-group select { width: 100%; padding: 12px 14px; border: 1px solid #2a2a2a; border-radius: 8px; background: #1a1a1a; color: #fff; font-size: 14px; outline: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-group input:focus, .form-group select:focus { border-color: #3b5bdb; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-group select option { background: #1a1a1a; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-submit { width: 100%; padding: 14px; background: #fff; color: #0f0f0f; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 8px; transition: opacity 0.2s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-submit:hover { opacity: 0.9; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-success { display: none; text-align: center; padding: 2rem; color: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-success h3 { font-size: 20px; margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-success p { color: #888; font-size: 14px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* FOOTER */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer { padding: 2.5rem; text-align: center; border-top: 1px solid #f0f0f0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer p { font-size: 13px; color: #999; line-height: 1.7; }</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- NAV --&gt;</p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-logo"&gt;EVERSTONE CAPITAL&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#process"&gt;Process&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#deals"&gt;Deal Flow&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#invest"&gt;Investors&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-cta" onclick="document.getElementById('invest').scrollIntoView({behavior:'smooth'})"&gt;Investor Inquiry&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- HERO --&gt;</p>
+<p class="p1">&lt;div class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-badge"&gt;Multifamily Value-Add Acquisitions&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Institutional-quality acquisitions across high-growth US markets&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Everstone Capital acquires and repositions 5–100 unit multifamily assets with a disciplined, process-driven approach — delivering consistent risk-adjusted returns to our investor partners.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-btns"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn-dark" onclick="document.getElementById('invest').scrollIntoView({behavior:'smooth'})"&gt;Investor Relations&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn-outline" onclick="document.getElementById('deals').scrollIntoView({behavior:'smooth'})"&gt;Current Deal Flow&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- METRICS STRIP --&gt;</p>
+<p class="p1">&lt;div class="metrics-strip"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="metric-item"&gt;&lt;div class="value"&gt;7%+&lt;/div&gt;&lt;div class="label"&gt;Cash-on-Cash Return&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="metric-item"&gt;&lt;div class="value"&gt;13%+&lt;/div&gt;&lt;div class="label"&gt;Target IRR&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="metric-item"&gt;&lt;div class="value"&gt;1.5x+&lt;/div&gt;&lt;div class="label"&gt;Equity Multiple&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="metric-item"&gt;&lt;div class="value"&gt;3–5 yr&lt;/div&gt;&lt;div class="label"&gt;Hold Period&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="metric-item"&gt;&lt;div class="value"&gt;$15K&lt;/div&gt;&lt;div class="label"&gt;Minimum Investment&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- PROCESS --&gt;</p>
+<p class="p1">&lt;div class="section" id="process"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-tag"&gt;Acquisition Process&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;How we evaluate and execute on every deal&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;A repeatable, process-driven approach from initial screening through close — applied consistently on every acquisition.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="process-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="process-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-num"&gt;Step 01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-title"&gt;Market screening&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-text"&gt;We identify markets with demonstrated rent growth, population inflow, and job diversification — then source deals within those markets through established broker relationships.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="process-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-num"&gt;Step 02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-title"&gt;In-house underwriting&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-text"&gt;Every deal is underwritten internally against T12 actuals, rent roll data, and current market comps. No assumptions, no projections built to impress.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="process-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-num"&gt;Step 03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-title"&gt;Disciplined offers&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-text"&gt;Offers are made only when returns clear our thresholds at our price. We do not pursue deals that do not meet our criteria — regardless of market pressure.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="process-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-num"&gt;Step 04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-title"&gt;Investor reporting&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-text"&gt;Regular reporting on all active investments — financials, operational updates, and distributions on schedule. No surprises.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- CRITERIA --&gt;</p>
+<p class="p1">&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-tag"&gt;Investment Criteria&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;What we target&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Value-add multifamily with clear upside through renovation, operational improvement, or market rent growth — in markets with strong demand fundamentals.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="criteria-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="criteria-card"&gt;&lt;div class="criteria-label"&gt;Asset size&lt;/div&gt;&lt;div class="criteria-value"&gt;5–100 units&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="criteria-card"&gt;&lt;div class="criteria-label"&gt;Strategy&lt;/div&gt;&lt;div class="criteria-value"&gt;Value-add repositioning&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="criteria-card"&gt;&lt;div class="criteria-label"&gt;Indiana&lt;/div&gt;&lt;div class="criteria-value"&gt;Indianapolis, Gary&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="criteria-card"&gt;&lt;div class="criteria-label"&gt;Southeast&lt;/div&gt;&lt;div class="criteria-value"&gt;TN, KY, GA, FL&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="criteria-card"&gt;&lt;div class="criteria-label"&gt;Midwest&lt;/div&gt;&lt;div class="criteria-value"&gt;Michigan&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="criteria-card"&gt;&lt;div class="criteria-label"&gt;Southwest&lt;/div&gt;&lt;div class="criteria-value"&gt;Nevada&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- DEALS --&gt;</p>
+<p class="p1">&lt;div class="section" id="deals"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-tag"&gt;Current Deal Flow&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Active acquisitions&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Current deals under active pursuit. Each has been fully underwritten in-house against our return thresholds prior to offer submission.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="deals-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="deals-loading"&gt;Loading current deal flow...&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ABOUT --&gt;</p>
+<p class="p1">&lt;div class="section" id="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-tag"&gt;About&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Everstone Capital&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="about-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="about-text"&gt;Everstone Capital is a private real estate investment firm focused on the acquisition and repositioning of multifamily assets across select high-growth markets in the United States. Our strategy centers on identifying undervalued properties with clear operational upside — and executing on that upside through disciplined capital allocation and active asset management.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="about-text"&gt;We operate with an institutional underwriting process applied to middle-market deals — the segment most institutional capital overlooks. That's where we find value, and that's where our investors benefit.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pillars"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-title"&gt;Process-driven acquisitions&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-text"&gt;Every deal goes through the same rigorous underwriting process before an offer is made.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-title"&gt;Investor alignment&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-text"&gt;We invest alongside our partners. Our interests are aligned at every stage of the deal.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-title"&gt;Transparent reporting&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-text"&gt;Regular financial and operational updates on every active investment.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="pillar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-title"&gt;Capital discipline&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pillar-text"&gt;We walk away from deals that don't meet our return thresholds. Always.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FORM --&gt;</p>
+<p class="p1">&lt;div class="form-section" id="invest"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="form-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-tag"&gt;Investor Relations&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Request investor information&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="form-subtitle"&gt;We work with a select group of investors on each acquisition. Complete the form below to receive our investor overview and be considered for future opportunities. Minimum investment $15,000.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lp-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;First name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="text" id="firstName" placeholder="James" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label&gt;Last name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="text" id="lastName" placeholder="Wilson" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Email address&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="email" id="email" placeholder="james@example.com" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Investable capital&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="capital"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="$15K – $25K"&gt;$15K – $25K&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="$25K – $50K"&gt;$25K – $50K&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="$50K – $100K"&gt;$50K – $100K&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="$100K – $250K"&gt;$100K – $250K&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="$250K+"&gt;$250K+&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Accredited investor status&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="accredited"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="Yes"&gt;Yes — I'm accredited&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="No"&gt;No — I'm not accredited&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="form-submit" onclick="submitForm()"&gt;Submit inquiry&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-success" id="form-success"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Inquiry received&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Our team will be in touch shortly to discuss upcoming investment opportunities.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FOOTER --&gt;</p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Everstone Capital · everstonemultifamily.com · tahric@everstonemultifamily.com&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p style="margin-top:8px;"&gt;This is not an offer to sell or solicitation to buy securities. All investments involve risk and may result in loss of principal. For accredited and non-accredited investors. Minimum investment $15,000.&lt;/p&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// HubSpot portal ID</p>
+<p class="p1">const PORTAL_ID = '246622802';</p>
+<p class="p2"><br></p>
+<p class="p1">// Load active deals from HubSpot</p>
+<p class="p1">async function loadDeals() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const response = await fetch(`https://api.anthropic.com/v1/messages`, {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body: JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">        </span>model: 'claude-sonnet-4-6',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>max_tokens: 1000,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>messages: [{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>role: 'user',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>content: `Call the HubSpot API for portal ${PORTAL_ID} to get active deals in stages "Offer Drafted" or "Offer Sent" from the Multifamily Acquisitions pipeline. Return only a JSON array of deals with: name, address, units, asking_price, offer_price, coc, noi, dscr, capital_to_raise, gap_percent. No explanation, just the JSON array.`</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const data = await response.json();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// For now show static deals until HubSpot API is wired</p>
+<p class="p1"><span class="Apple-converted-space">    </span>showStaticDeals();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} catch(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>showStaticDeals();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function showStaticDeals() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const deals = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>name: 'Atlas Apartments',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>location: 'Indianapolis, IN · 67 units',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>desc: 'Value-add repositioning opportunity. Current rents running below market with clear upside through unit renovation. Strong Indianapolis fundamentals support long-term rent growth.',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>offer: '$3,630,000',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>coc: '8.0%',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dscr: '1.79x',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ppu: '$54,179',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>featured: true</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>name: 'Peachtree Apartments',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>location: 'Florida · 12 units',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>desc: 'Strong in-place income with light value-add upside. Returns clear our thresholds at acquisition price with room to negotiate.',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>offer: '$1,200,000',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>coc: '8.0%',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dscr: '1.72x',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ppu: '$100,000',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>featured: false</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>name: 'Straley Apartments',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>location: 'Midwest · 22 units',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>desc: 'Mid-size asset with solid in-place fundamentals. Returns pencil near asking price — a signal of strong current performance with additional upside through operational improvement.',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>offer: '$1,545,000',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>coc: '8.0%',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dscr: '2.00x',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>ppu: '$70,227',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>featured: false</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const container = document.getElementById('deals-container');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>container.innerHTML = `&lt;div class="deals-grid"&gt;${deals.map(d =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="deal-card ${d.featured ? 'featured' : ''}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="deal-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="deal-name"&gt;${d.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="deal-loc"&gt;${d.location}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="deal-tag"&gt;Under pursuit&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="deal-desc"&gt;${d.desc}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="deal-stats"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;div class="stat-label"&gt;Offer&lt;/div&gt;&lt;div class="stat-value"&gt;${d.offer}&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;div class="stat-label"&gt;Target CoC&lt;/div&gt;&lt;div class="stat-value"&gt;${d.coc}&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;div class="stat-label"&gt;DSCR&lt;/div&gt;&lt;div class="stat-value"&gt;${d.dscr}&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;div class="stat-label"&gt;Price / unit&lt;/div&gt;&lt;div class="stat-value"&gt;${d.ppu}&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`).join('')}&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Submit LP form to HubSpot</p>
+<p class="p1">async function submitForm() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const firstName = document.getElementById('firstName').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const lastName = document.getElementById('lastName').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const email = document.getElementById('email').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const capital = document.getElementById('capital').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const accredited = document.getElementById('accredited').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!firstName || !lastName || !email) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert('Please fill in all required fields.');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const btn = document.querySelector('.form-submit');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.textContent = 'Submitting...';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.style.opacity = '0.7';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/everstone-lp-form`, {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body: JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">        </span>fields: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ name: 'firstname', value: firstName },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ name: 'lastname', value: lastName },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ name: 'email', value: email },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ name: 'investable_capital_range', value: capital },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ name: 'accredited_status', value: accredited },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ name: 'lp_source', value: 'Website' }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>context: { pageUri: window.location.href, pageName: 'Everstone Capital — Investor Inquiry' }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('lp-form').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('form-success').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} catch(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Fallback — show success anyway</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('lp-form').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('form-success').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Load deals on page load</p>
+<p class="p1">loadDeals();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
