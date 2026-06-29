@@ -287,8 +287,7 @@
 </div></footer>
 
 <script>
-// HubSpot portal ID. Form GUID is a PLACEHOLDER — replace 'everstone-lp-form'
-// with the real form GUID from Marketing → Forms → Everstone LP Inquiry.
+// HubSpot portal ID + Everstone LP Inquiry form GUID.
 const PORTAL_ID = '246622802';
 
 async function submitForm(){
@@ -301,7 +300,7 @@ async function submitForm(){
   const btn=document.querySelector('.form-submit');
   btn.textContent='Submitting…';btn.style.opacity='0.7';
   try{
-    await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/everstone-lp-form`,{
+    await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/cd7cdd1d-563e-49cc-83b2-8709a5cd4fc8`,{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         fields:[
