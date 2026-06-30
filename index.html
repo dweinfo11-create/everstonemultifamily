@@ -1,126 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.className+=' js';</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Everstone Capital — Multifamily Value-Add Acquisitions</title>
+<title>Everstone Capital — Value-Add Multifamily Acquisitions</title>
+<meta name="description" content="Everstone Capital is a private real estate firm acquiring and repositioning middle-market multifamily across high-growth US markets — institutional underwriting, disciplined capital, durable risk-adjusted returns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#080808; --panel:#0c0c0c; --line:#1e1e1e; --gold:#c9a96e;
-    --text:#e6e4df; --muted:#8a857c; --white:#f5f3ee;
-    --serif:Georgia,'Times New Roman',serif;
-    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    /* Indiana limestone — quarried, cool, not cream */
+    --stone:#e6e2d7;
+    --stone-2:#ddd8ca;     /* alternating sections */
+    --stone-3:#d2ccba;     /* deeper bands / cards */
+    --line:#c4bca8;        /* hairline cut into stone */
+    --line-soft:#cfc8b6;
+    /* quarried slate */
+    --ink:#1c201d;
+    --body:#3c403a;
+    --muted:#6d6f64;
+    /* aged copper — verdigris on civic roofs */
+    --patina:#2e4a3f;
+    --patina-2:#436a59;
+    --patina-ink:#22382f;
+    /* faces */
+    --serif:'Spectral',Georgia,serif;
+    --sans:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;color:var(--white);letter-spacing:.2px}
+  body{
+    background:var(--stone);color:var(--body);
+    font-family:var(--sans);font-size:16px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  /* limestone grain — SVG turbulence, no external asset */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
+    opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  body>*{position:relative;z-index:2}
+
+  h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:600;letter-spacing:-.012em;line-height:1.08}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
-  .eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-  .section-title{font-size:34px;line-height:1.2;margin-bottom:14px}
-  .section-intro{color:var(--muted);max-width:620px;margin-bottom:48px}
-  section{border-top:1px solid var(--line)}
-  .pad{padding:90px 0}
-  .btn{display:inline-block;padding:14px 26px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--gold);transition:.15s}
-  .btn-gold{background:var(--gold);color:#0a0a0a;font-weight:600}
-  .btn-gold:hover{background:#d8bd87}
-  .btn-ghost{background:transparent;color:var(--gold)}
-  .btn-ghost:hover{background:rgba(201,169,110,.08)}
+  ::selection{background:var(--patina);color:var(--stone)}
 
-  /* NAV */
-  nav{position:sticky;top:0;z-index:50;background:rgba(8,8,8,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .logo{font-family:var(--serif);font-size:18px;letter-spacing:4px;color:var(--white)}
-  .nav-links{display:flex;gap:36px;align-items:center}
-  .nav-links a{font-size:13px;letter-spacing:1px;color:var(--muted)}
-  .nav-links a:hover{color:var(--text)}
-  .nav-cta{padding:11px 22px;border:1px solid var(--gold);color:var(--gold);font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
-  .nav-cta:hover{background:var(--gold);color:#0a0a0a}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .section{padding:clamp(66px,8.5vw,116px) 0;border-top:1px solid var(--line)}
+  .section.alt{background:var(--stone-2)}
 
-  /* HERO */
-  .hero{padding:130px 0 110px}
-  .hero h1{font-size:56px;line-height:1.1;max-width:880px;margin-bottom:26px}
-  .hero p{color:var(--muted);font-size:19px;max-width:640px;margin-bottom:40px}
-  .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+  /* incised lettering — carved into limestone */
+  .incised{
+    color:var(--ink);
+    text-shadow:0 1px 0 rgba(255,255,255,.55),0 2px 1px rgba(28,32,29,.10);
+  }
 
-  /* METRICS BAR */
-  .metrics{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .metric{padding:38px 28px;border-left:1px solid var(--line)}
+  /* eyebrow / survey label */
+  .ey{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:12px;font-weight:500;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--patina);
+    margin-bottom:22px;
+  }
+  .ey::before{content:"";width:26px;height:1px;background:var(--patina);flex:none}
+  .ey .idx{color:var(--muted);letter-spacing:.18em}
+
+  .h-sec{font-size:clamp(1.85rem,3.4vw,2.55rem);max-width:18ch}
+  .lead{color:var(--body);max-width:60ch;margin-top:18px;font-size:1.05rem}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    padding:15px 26px;transition:transform .18s ease,background .18s ease,color .18s ease;
+    border:1px solid transparent;
+  }
+  .btn .ar{transition:transform .18s ease}
+  .btn:hover .ar{transform:translateX(4px)}
+  .btn-solid{background:var(--patina);color:var(--stone)}
+  .btn-solid:hover{background:var(--patina-ink)}
+  .btn-ghost{border-color:var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--stone)}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:60;
+    background:color-mix(in srgb,var(--stone) 88%,transparent);
+    backdrop-filter:blur(9px) saturate(1.1);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .mark{font-family:var(--serif);font-weight:700;font-size:18px;letter-spacing:.34em;color:var(--ink)}
+  .mark .o{color:var(--patina)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--muted);transition:color .15s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links .nav-cta{
+    border:1px solid var(--ink);color:var(--ink);padding:9px 18px;letter-spacing:.14em;text-transform:uppercase;font-size:11.5px;
+  }
+  .nav-links .nav-cta:hover{background:var(--ink);color:var(--stone)}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:clamp(54px,8vw,98px) 0 clamp(48px,6vw,76px)}
+  .hero-grid{display:grid;grid-template-columns:1fr 132px;gap:56px;align-items:stretch}
+  .coords{
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);display:flex;gap:22px;flex-wrap:wrap;margin-bottom:34px;
+  }
+  .coords b{color:var(--patina);font-weight:500}
+  .hero h1{
+    font-size:clamp(2.55rem,6vw,4.6rem);font-weight:700;line-height:1.02;
+    letter-spacing:-.022em;max-width:15ch;
+  }
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--patina)}
+  .hero p{color:var(--body);font-size:clamp(1.05rem,1.5vw,1.22rem);max-width:54ch;margin:30px 0 38px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* datum line under hero copy */
+  .datum{margin-top:54px;position:relative;height:1px;background:var(--line);max-width:560px}
+  .datum::before,.datum::after{content:"";position:absolute;top:-4px;width:1px;height:9px;background:var(--patina)}
+  .datum::before{left:0}.datum::after{right:0}
+  .datum span{
+    position:absolute;top:-24px;left:0;font-family:var(--mono);font-size:11px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  }
+
+  /* core sample — markets as strata */
+  .core{
+    border:1px solid var(--line);background:var(--stone-2);
+    display:flex;flex-direction:column;min-height:340px;
+  }
+  .core-cap{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);text-align:center;
+  }
+  .strata{flex:1;display:flex;flex-direction:column}
+  .stratum{flex:1;border-bottom:1px solid var(--line-soft);padding:12px 12px 10px;position:relative;overflow:hidden}
+  .stratum:last-child{border-bottom:none}
+  .stratum .reg{font-family:var(--serif);font-size:14px;color:var(--ink);font-weight:600;line-height:1.15;position:relative;z-index:2}
+  .stratum .geo{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:var(--muted);margin-top:5px;position:relative;z-index:2}
+  .stratum:nth-child(1){background:#e3dfd3}
+  .stratum:nth-child(2){background:#dbd5c6}
+  .stratum:nth-child(3){background:#d2ccba}
+  .stratum:nth-child(4){background:#c9c2ad}
+
+  /* ---------- METRICS / RETURN PROFILE ---------- */
+  .profile-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:30px}
+  .profile-head .note{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line)}
+  .metric{padding:34px 26px;border-left:1px solid var(--line)}
   .metric:first-child{border-left:none}
-  .metric .num{font-family:var(--serif);font-size:34px;color:var(--gold);line-height:1}
-  .metric .lab{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:12px}
+  .metric .num{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,3.6vw,2.85rem);color:var(--patina);line-height:1;font-variant-numeric:tabular-nums}
+  .metric .lab{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:15px}
 
-  /* GRID CARDS (process) */
-  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
-  .cell{padding:36px 30px;border-left:1px solid var(--line)}
-  .grid-4 .cell:first-child{border-left:none}
-  .cell .step{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-  .cell h3{font-size:20px;margin-bottom:12px}
-  .cell p{color:var(--muted);font-size:15px}
+  /* ---------- PROCESS ---------- */
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin-top:8px}
+  .step{padding:38px 30px 42px;border-left:1px solid var(--line)}
+  .grid-4 .step:first-child{border-left:none}
+  .step .rn{font-family:var(--serif);font-size:1.45rem;color:var(--patina);font-weight:500;letter-spacing:.04em}
+  .step .ln{height:1px;background:var(--line);margin:18px 0 20px}
+  .step h3{font-size:1.18rem;margin-bottom:11px}
+  .step p{color:var(--body);font-size:.95rem}
 
-  /* CRITERIA ROW (6 cells) */
-  .grid-6{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line)}
-  .crit{padding:34px 24px;border-left:1px solid var(--line)}
-  .grid-6 .crit:first-child{border-left:none}
-  .crit .k{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-  .crit .v{font-family:var(--serif);font-size:18px;color:var(--white);line-height:1.3}
+  /* ---------- CRITERIA ---------- */
+  .crit-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:0;border:1px solid var(--line);margin-top:8px}
+  .crit{padding:32px 30px;border-left:1px solid var(--line)}
+  .crit-grid .crit:first-child{border-left:none}
+  .crit .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .crit .v{font-family:var(--serif);font-size:1.25rem;color:var(--ink);line-height:1.25}
+  .crit .sub{font-size:.9rem;color:var(--body);margin-top:8px}
+  .crit.wide{grid-column:1/2}
+  .markets{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-top:none}
+  .mk{padding:26px 30px;border-left:1px solid var(--line)}
+  .markets .mk:first-child{border-left:none}
+  .mk .reg{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--patina);margin-bottom:9px}
+  .mk .place{font-family:var(--serif);font-size:1.08rem;color:var(--ink)}
 
-  /* DEALS (3 cards) */
-  .deals{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
-  .deal{padding:34px 30px;border-left:1px solid var(--line);display:flex;flex-direction:column}
+  /* ---------- DEALS ---------- */
+  .deals{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);margin-top:8px}
+  .deal{padding:0;border-left:1px solid var(--line);display:flex;flex-direction:column}
   .deals .deal:first-child{border-left:none}
-  .deal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
-  .deal-name{font-family:var(--serif);font-size:21px;color:var(--white)}
-  .deal-loc{font-size:13px;color:var(--muted);margin-top:4px}
-  .deal-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:5px 9px;white-space:nowrap}
-  .deal-desc{color:var(--muted);font-size:14px;margin:18px 0 24px;flex:1}
-  .deal-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-  .deal-stats > div{background:var(--bg);padding:16px}
-  .stat-k{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-  .stat-v{font-family:var(--serif);font-size:18px;color:var(--gold);margin-top:6px}
+  .deal-body{padding:30px 28px 0;display:flex;flex-direction:column;flex:1}
+  .deal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:6px}
+  .deal-name{font-family:var(--serif);font-size:1.35rem;color:var(--ink);font-weight:600}
+  .deal-loc{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-top:7px;text-transform:uppercase}
+  .deal-tag{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--patina);border:1px solid var(--patina);padding:5px 9px;white-space:nowrap;
+    display:flex;align-items:center;gap:6px;
+  }
+  .deal-tag .dot{width:5px;height:5px;background:var(--patina);border-radius:50%;display:inline-block}
+  .deal-desc{color:var(--body);font-size:.93rem;margin:18px 0 24px;flex:1}
+  .deal-stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+  .ds{padding:16px 28px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ds:nth-child(2n+1){border-left:none}
+  .ds:nth-child(n+3){border-bottom:none}
+  .ds .sk{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .ds .sv{font-family:var(--mono);font-size:1.02rem;font-weight:500;color:var(--ink);margin-top:6px;font-variant-numeric:tabular-nums}
+  .ds.acc .sv{color:var(--patina)}
 
-  /* ABOUT (2-col + 2x2 pillars) */
-  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-  .about-text p{color:var(--muted);margin-bottom:20px}
-  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-  .pillar{background:var(--bg);border-top:2px solid var(--gold);padding:28px 24px}
-  .pillar h3{font-size:17px;margin-bottom:10px}
-  .pillar p{color:var(--muted);font-size:14px}
+  /* ---------- ABOUT ---------- */
+  .two{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+  .about-text p{color:var(--body);margin-top:18px;max-width:52ch}
+  .about-text p:first-of-type{margin-top:22px}
+  .pillars{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+  .pillar{padding:28px 26px;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  .pillars .pillar:nth-child(-n+2){border-top:none}
+  .pillars .pillar:nth-child(2n+1){border-left:none}
+  .pillar .pk{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--patina);margin-bottom:14px}
+  .pillar h3{font-size:1.06rem;margin-bottom:9px}
+  .pillar p{color:var(--body);font-size:.9rem}
 
-  /* FORM */
-  .form-col .desc{color:var(--muted);margin-bottom:24px}
-  .min-note{border-left:2px solid var(--gold);padding:10px 0 10px 18px;color:var(--text);font-size:14px}
-  .form-box{border:1px solid var(--line);padding:36px}
+  /* ---------- INVESTORS / FORM ---------- */
+  .form-intro .lead{margin-bottom:26px}
+  .min-note{
+    border-left:2px solid var(--patina);padding:14px 0 14px 20px;color:var(--ink);
+    font-size:.95rem;max-width:46ch;
+  }
+  .min-note b{font-family:var(--mono);font-size:.85rem;letter-spacing:.04em;color:var(--patina);display:block;margin-bottom:4px;text-transform:uppercase}
+  .form-box{border:1px solid var(--line);background:var(--stone-2);padding:34px}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .fg{margin-bottom:18px}
-  .fg label{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-  .fg input,.fg select{width:100%;background:#0a0a0a;border:1px solid var(--line);color:var(--text);padding:13px 14px;font-family:var(--sans);font-size:15px}
-  .fg input:focus,.fg select:focus{outline:none;border-color:var(--gold)}
-  .form-submit{width:100%;margin-top:8px;padding:15px;background:var(--gold);color:#0a0a0a;border:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;cursor:pointer}
-  .form-submit:hover{background:#d8bd87}
-  .form-success{display:none;border:1px solid var(--gold);padding:48px 36px;text-align:center}
-  .form-success h3{font-size:24px;margin-bottom:12px;color:var(--gold)}
-  .form-success p{color:var(--muted)}
+  .fg label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+  .fg input,.fg select{
+    width:100%;background:var(--stone);border:1px solid var(--line);color:var(--ink);
+    padding:13px 14px;font-family:var(--sans);font-size:15px;border-radius:0;
+    transition:border-color .15s,box-shadow .15s;
+  }
+  .fg select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 19px) 50%,calc(100% - 14px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+  .fg input:focus,.fg select:focus{outline:none;border-color:var(--patina);box-shadow:0 0 0 3px rgba(46,74,63,.12)}
+  .fg input::placeholder{color:#9b9a8d}
+  .form-submit{
+    width:100%;margin-top:6px;padding:16px;background:var(--patina);color:var(--stone);border:none;
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;
+    transition:background .18s;
+  }
+  .form-submit:hover{background:var(--patina-ink)}
+  .form-success{display:none;border:1px solid var(--patina);background:var(--stone-2);padding:48px 36px;text-align:center}
+  .form-success h3{font-size:1.5rem;margin-bottom:12px;color:var(--patina)}
+  .form-success p{color:var(--body)}
+  .form-success .seal{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
 
-  /* FOOTER */
-  footer{border-top:1px solid var(--line);padding:40px 0}
-  .foot-in{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
-  .foot-logo{font-family:var(--serif);letter-spacing:4px;color:var(--white)}
-  .foot-logo span{display:block;font-family:var(--sans);letter-spacing:.5px;font-size:13px;color:var(--muted);margin-top:10px}
-  .disclaimer{max-width:640px;font-size:12px;color:#6a665e;text-align:right}
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding:52px 0 44px;background:var(--stone-2)}
+  .foot-in{display:flex;justify-content:space-between;align-items:flex-start;gap:44px;flex-wrap:wrap}
+  .foot-mark{font-family:var(--serif);font-weight:700;letter-spacing:.32em;color:var(--ink);font-size:17px}
+  .foot-mark .o{color:var(--patina)}
+  .foot-contact{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);margin-top:14px;line-height:1.9}
+  .foot-contact a:hover{color:var(--patina)}
+  .disclaimer{max-width:560px;font-size:11.5px;color:var(--muted);line-height:1.7;text-align:right}
 
-  @media(max-width:900px){
-    .wrap{padding:0 20px}
+  /* reveal — progressive enhancement, only hides when JS is active */
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .js .rv.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr}
+    .core{flex-direction:row;min-height:0}
+    .strata{flex-direction:row;width:100%}
+    .stratum{border-bottom:none;border-right:1px solid var(--line-soft)}
+    .core-cap{display:none}
+    .two{grid-template-columns:1fr;gap:44px}
+    .metrics{grid-template-columns:1fr 1fr 1fr}
+    .metric:nth-child(-n+2){border-top:none}
+    .metric:nth-child(n+3){border-top:1px solid var(--line)}
+  }
+  @media(max-width:760px){
+    .wrap{padding:0 22px}
     .nav-links{display:none}
-    .hero h1{font-size:38px}
-    .metrics,.grid-4,.grid-6,.deals{grid-template-columns:1fr;border:1px solid var(--line)}
-    .metric,.cell,.crit,.deal{border-left:none;border-top:1px solid var(--line)}
-    .metrics .metric:first-child,.grid-4 .cell:first-child,.grid-6 .crit:first-child,.deals .deal:first-child{border-top:none}
-    .two-col,.form-row,.pillars{grid-template-columns:1fr;gap:32px}
-    .pillars{gap:1px}
+    .grid-4,.deals,.crit-grid,.markets,.pillars{grid-template-columns:1fr}
+    .step,.deal,.crit,.mk,.pillar{border-left:none;border-top:1px solid var(--line)}
+    .grid-4 .step:first-child,.deals .deal:first-child,.crit-grid .crit:first-child,.markets .mk:first-child,.pillars .pillar:first-child{border-top:none}
+    .pillars .pillar:nth-child(2){border-top:1px solid var(--line)}
+    .crit.wide{grid-column:auto}
+    .metrics{grid-template-columns:1fr 1fr}
+    .metric{border-top:1px solid var(--line)}
+    .metric:nth-child(-n+2){border-top:none}
+    .metric:nth-child(2){border-left:1px solid var(--line)}
+    .form-row{grid-template-columns:1fr}
+    .strata{flex-direction:column}
+    .stratum{border-right:none;border-bottom:1px solid var(--line-soft)}
     .foot-in{flex-direction:column}.disclaimer{text-align:left}
-    .section-title{font-size:27px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important}
+    .rv{opacity:1;transform:none;transition:none}
+    .btn,.btn .ar{transition:none}
   }
 </style>
 </head>
@@ -128,135 +299,175 @@
 
 <!-- NAV -->
 <nav><div class="wrap nav-in">
-  <div class="logo">EVERSTONE CAPITAL</div>
+  <a href="#top" class="mark">EVERST<span class="o">O</span>NE</a>
   <div class="nav-links">
     <a href="#process">Process</a>
+    <a href="#criteria">Criteria</a>
     <a href="#deals">Deal Flow</a>
     <a href="#about">About</a>
-    <a href="#investors">Investors</a>
     <a href="#investors" class="nav-cta">Investor Inquiry</a>
   </div>
 </div></nav>
 
 <!-- HERO -->
-<header class="wrap hero">
-  <div class="eyebrow">Multifamily Value-Add Acquisitions</div>
-  <h1>Institutional-quality acquisitions across high-growth US markets</h1>
-  <p>Everstone Capital acquires and repositions 5–100 unit multifamily assets with a disciplined, process-driven approach — delivering consistent risk-adjusted returns to our investor partners.</p>
-  <div class="hero-actions">
-    <a href="#investors" class="btn btn-gold">Investor Relations</a>
-    <a href="#deals" class="btn btn-ghost">Current Deal Flow</a>
+<header id="top" class="wrap hero">
+  <div class="coords">
+    <span>Private Real Estate</span>
+    <span><b>Value-Add Multifamily</b></span>
+    <span>Indianapolis, IN</span>
+  </div>
+  <div class="hero-grid">
+    <div>
+      <h1 class="incised">The middle market,<br>underwritten like an <em>institution.</em></h1>
+      <p>Everstone Capital acquires and repositions 5–100 unit multifamily across high-growth US markets — the segment institutional capital overlooks. Disciplined underwriting, durable risk-adjusted returns, and reporting our partners can rely on.</p>
+      <div class="hero-actions">
+        <a href="#investors" class="btn btn-solid">Investor Relations <span class="ar">→</span></a>
+        <a href="#deals" class="btn btn-ghost">Current Deal Flow</a>
+      </div>
+      <div class="datum"><span>Where we build</span></div>
+    </div>
+    <!-- core sample: markets rendered as strata -->
+    <aside class="core" aria-label="Target markets">
+      <div class="core-cap">Core / Markets</div>
+      <div class="strata">
+        <div class="stratum"><div class="reg">Indiana</div><div class="geo">Indianapolis · Gary</div></div>
+        <div class="stratum"><div class="reg">Southeast</div><div class="geo">TN · KY · GA · FL</div></div>
+        <div class="stratum"><div class="reg">Midwest</div><div class="geo">Michigan</div></div>
+        <div class="stratum"><div class="reg">Southwest</div><div class="geo">Nevada</div></div>
+      </div>
+    </aside>
   </div>
 </header>
 
-<!-- METRICS -->
-<div class="metrics">
-  <div class="metric"><div class="num">7%+</div><div class="lab">Cash-on-Cash Return</div></div>
-  <div class="metric"><div class="num">13%+</div><div class="lab">Target IRR</div></div>
-  <div class="metric"><div class="num">1.5x+</div><div class="lab">Equity Multiple</div></div>
-  <div class="metric"><div class="num">3–5 yr</div><div class="lab">Hold Period</div></div>
-  <div class="metric"><div class="num">$15K</div><div class="lab">Minimum Investment</div></div>
-</div>
+<!-- RETURN PROFILE -->
+<section class="section rv"><div class="wrap">
+  <div class="profile-head">
+    <div class="ey">Target Return Profile</div>
+    <div class="note">Per asset · at underwriting</div>
+  </div>
+  <div class="metrics">
+    <div class="metric"><div class="num">7%+</div><div class="lab">Cash-on-Cash</div></div>
+    <div class="metric"><div class="num">13%+</div><div class="lab">Target IRR</div></div>
+    <div class="metric"><div class="num">1.5x+</div><div class="lab">Equity Multiple</div></div>
+    <div class="metric"><div class="num">3–5 yr</div><div class="lab">Hold Period</div></div>
+    <div class="metric"><div class="num">$15K</div><div class="lab">Minimum Investment</div></div>
+  </div>
+</div></section>
 
 <!-- PROCESS -->
-<section id="process" class="pad"><div class="wrap">
-  <div class="eyebrow">Acquisition Process</div>
-  <h2 class="section-title">How we evaluate and execute on every deal</h2>
-  <p class="section-intro">A repeatable, process-driven approach from initial screening through close — applied consistently on every acquisition.</p>
+<section id="process" class="section alt rv"><div class="wrap">
+  <div class="ey">Acquisition Process</div>
+  <h2 class="h-sec incised">The same discipline on every deal, start to close.</h2>
+  <p class="lead">A repeatable process applied consistently — from market screening through investor reporting. The order matters, so we hold it.</p>
   <div class="grid-4">
-    <div class="cell"><div class="step">Step 01</div><h3>Market screening</h3><p>We identify markets with demonstrated rent growth, population inflow, and job diversification — then source deals within those markets through established broker relationships.</p></div>
-    <div class="cell"><div class="step">Step 02</div><h3>In-house underwriting</h3><p>Every deal is underwritten internally against T12 actuals, rent roll data, and current market comps. No assumptions, no projections built to impress.</p></div>
-    <div class="cell"><div class="step">Step 03</div><h3>Disciplined offers</h3><p>Offers are made only when returns clear our thresholds at our price. We do not pursue deals that do not meet our criteria — regardless of market pressure.</p></div>
-    <div class="cell"><div class="step">Step 04</div><h3>Investor reporting</h3><p>Regular reporting on all active investments — financials, operational updates, and distributions on schedule. No surprises.</p></div>
+    <div class="step"><div class="rn">I</div><div class="ln"></div><h3>Market screening</h3><p>We target markets with proven rent growth, population inflow, and job diversification — then source within them through established broker relationships.</p></div>
+    <div class="step"><div class="rn">II</div><div class="ln"></div><h3>In-house underwriting</h3><p>Every deal is underwritten internally against T-12 actuals, rent-roll data, and live comps. No assumptions, no projections built to impress.</p></div>
+    <div class="step"><div class="rn">III</div><div class="ln"></div><h3>Disciplined offers</h3><p>We offer only when returns clear our thresholds at our price. Deals that miss the criteria we let go — regardless of market pressure.</p></div>
+    <div class="step"><div class="rn">IV</div><div class="ln"></div><h3>Investor reporting</h3><p>Regular reporting on every active investment — financials, operational updates, and distributions on schedule. No surprises.</p></div>
   </div>
 </div></section>
 
 <!-- CRITERIA -->
-<section class="pad"><div class="wrap">
-  <div class="eyebrow">Investment Criteria</div>
-  <h2 class="section-title">What we target</h2>
-  <p class="section-intro">Value-add multifamily with clear upside through renovation, operational improvement, or market rent growth — in markets with strong demand fundamentals.</p>
-  <div class="grid-6">
-    <div class="crit"><div class="k">Asset size</div><div class="v">5–100 units</div></div>
-    <div class="crit"><div class="k">Strategy</div><div class="v">Value-add repositioning</div></div>
-    <div class="crit"><div class="k">Indiana</div><div class="v">Indianapolis, Gary</div></div>
-    <div class="crit"><div class="k">Southeast</div><div class="v">TN, KY, GA, FL</div></div>
-    <div class="crit"><div class="k">Midwest</div><div class="v">Michigan</div></div>
-    <div class="crit"><div class="k">Southwest</div><div class="v">Nevada</div></div>
+<section id="criteria" class="section rv"><div class="wrap">
+  <div class="ey">Investment Criteria</div>
+  <h2 class="h-sec incised">What we target.</h2>
+  <p class="lead">Value-add multifamily with clear upside — through renovation, operational improvement, or market rent growth — in markets with durable demand fundamentals.</p>
+  <div class="crit-grid">
+    <div class="crit wide"><div class="k">Asset size</div><div class="v">5–100 units</div><div class="sub">Middle-market — below institutional scale, above the fragmented small-deal market.</div></div>
+    <div class="crit"><div class="k">Strategy</div><div class="v">Value-add repositioning</div><div class="sub">Renovation, operations, and rent capture.</div></div>
+    <div class="crit"><div class="k">Discipline</div><div class="v">Buy at our price</div><div class="sub">Returns clear thresholds before any offer.</div></div>
+  </div>
+  <div class="markets">
+    <div class="mk"><div class="reg">Indiana</div><div class="place">Indianapolis, Gary</div></div>
+    <div class="mk"><div class="reg">Southeast</div><div class="place">TN · KY · GA · FL</div></div>
+    <div class="mk"><div class="reg">Midwest</div><div class="place">Michigan</div></div>
+    <div class="mk"><div class="reg">Southwest</div><div class="place">Nevada</div></div>
   </div>
 </div></section>
 
 <!-- DEALS -->
-<section id="deals" class="pad"><div class="wrap">
-  <div class="eyebrow">Current Deal Flow</div>
-  <h2 class="section-title">Active acquisitions</h2>
-  <p class="section-intro">Current deals under active pursuit. Each has been fully underwritten in-house against our return thresholds prior to offer submission.</p>
+<section id="deals" class="section alt rv"><div class="wrap">
+  <div class="ey">Current Deal Flow</div>
+  <h2 class="h-sec incised">Active acquisitions.</h2>
+  <p class="lead">Deals under active pursuit. Each has been fully underwritten in-house against our return thresholds before any offer was submitted.</p>
   <div class="deals">
-    <div class="deal">
-      <div class="deal-head"><div><div class="deal-name">Atlas Apartments</div><div class="deal-loc">Indianapolis, IN · 67 units</div></div><span class="deal-tag">Under pursuit</span></div>
-      <div class="deal-desc">Value-add repositioning opportunity. Current rents running below market with clear upside through unit renovation. Strong Indianapolis fundamentals support long-term rent growth.</div>
+    <div class="deal"><div class="deal-body">
+      <div class="deal-head">
+        <div><div class="deal-name">Atlas Apartments</div><div class="deal-loc">Indianapolis, IN · 67 units</div></div>
+        <span class="deal-tag"><span class="dot"></span>Under pursuit</span>
+      </div>
+      <div class="deal-desc">A value-add repositioning with in-place rents running below market and clear upside through unit renovation. Strong Indianapolis fundamentals support long-term rent growth.</div>
+      </div>
       <div class="deal-stats">
-        <div><div class="stat-k">Offer</div><div class="stat-v">$3,630,000</div></div>
-        <div><div class="stat-k">Target CoC</div><div class="stat-v">8.0%</div></div>
-        <div><div class="stat-k">DSCR</div><div class="stat-v">1.79x</div></div>
-        <div><div class="stat-k">Price / unit</div><div class="stat-v">$54,179</div></div>
+        <div class="ds acc"><div class="sk">Offer</div><div class="sv">$3,630,000</div></div>
+        <div class="ds acc"><div class="sk">Target CoC</div><div class="sv">8.0%</div></div>
+        <div class="ds"><div class="sk">DSCR</div><div class="sv">1.79x</div></div>
+        <div class="ds"><div class="sk">Price / unit</div><div class="sv">$54,179</div></div>
       </div>
     </div>
-    <div class="deal">
-      <div class="deal-head"><div><div class="deal-name">Peachtree Apartments</div><div class="deal-loc">Florida · 12 units</div></div><span class="deal-tag">Under pursuit</span></div>
-      <div class="deal-desc">Strong in-place income with light value-add upside. Returns clear our thresholds at acquisition price with room to negotiate.</div>
+    <div class="deal"><div class="deal-body">
+      <div class="deal-head">
+        <div><div class="deal-name">Peachtree Apartments</div><div class="deal-loc">Florida · 12 units</div></div>
+        <span class="deal-tag"><span class="dot"></span>Under pursuit</span>
+      </div>
+      <div class="deal-desc">Strong in-place income with light value-add upside. Returns clear our thresholds at acquisition price, with room to negotiate.</div>
+      </div>
       <div class="deal-stats">
-        <div><div class="stat-k">Offer</div><div class="stat-v">$1,270,000</div></div>
-        <div><div class="stat-k">Target CoC</div><div class="stat-v">8.0%</div></div>
-        <div><div class="stat-k">DSCR</div><div class="stat-v">1.78x</div></div>
-        <div><div class="stat-k">Price / unit</div><div class="stat-v">$105,833</div></div>
+        <div class="ds acc"><div class="sk">Offer</div><div class="sv">$1,270,000</div></div>
+        <div class="ds acc"><div class="sk">Target CoC</div><div class="sv">8.0%</div></div>
+        <div class="ds"><div class="sk">DSCR</div><div class="sv">1.78x</div></div>
+        <div class="ds"><div class="sk">Price / unit</div><div class="sv">$105,833</div></div>
       </div>
     </div>
-    <div class="deal">
-      <div class="deal-head"><div><div class="deal-name">Straley Apartments</div><div class="deal-loc">Midwest · 32 units</div></div><span class="deal-tag">Under pursuit</span></div>
-      <div class="deal-desc">Mid-size asset with solid in-place fundamentals. Returns pencil near asking price — a signal of strong current performance with additional upside through operational improvement.</div>
+    <div class="deal"><div class="deal-body">
+      <div class="deal-head">
+        <div><div class="deal-name">Straley Apartments</div><div class="deal-loc">Midwest · 32 units</div></div>
+        <span class="deal-tag"><span class="dot"></span>Under pursuit</span>
+      </div>
+      <div class="deal-desc">A mid-size asset with solid in-place fundamentals. Returns pencil near asking — a signal of strong current performance, with added upside through operational improvement.</div>
+      </div>
       <div class="deal-stats">
-        <div><div class="stat-k">Offer</div><div class="stat-v">$1,080,000</div></div>
-        <div><div class="stat-k">Target CoC</div><div class="stat-v">8.0%</div></div>
-        <div><div class="stat-k">DSCR</div><div class="stat-v">2.00x</div></div>
-        <div><div class="stat-k">Price / unit</div><div class="stat-v">$33,750</div></div>
+        <div class="ds acc"><div class="sk">Offer</div><div class="sv">$1,080,000</div></div>
+        <div class="ds acc"><div class="sk">Target CoC</div><div class="sv">8.0%</div></div>
+        <div class="ds"><div class="sk">DSCR</div><div class="sv">2.00x</div></div>
+        <div class="ds"><div class="sk">Price / unit</div><div class="sv">$33,750</div></div>
       </div>
     </div>
   </div>
 </div></section>
 
 <!-- ABOUT -->
-<section id="about" class="pad"><div class="wrap two-col">
+<section id="about" class="section rv"><div class="wrap two">
   <div class="about-text">
-    <div class="eyebrow">About</div>
-    <h2 class="section-title">Everstone Capital</h2>
-    <p>Everstone Capital is a private real estate investment firm focused on the acquisition and repositioning of multifamily assets across select high-growth markets in the United States. Our strategy centers on identifying undervalued properties with clear operational upside — and executing on that upside through disciplined capital allocation and active asset management.</p>
-    <p>We operate with an institutional underwriting process applied to middle-market deals — the segment most institutional capital overlooks. That's where we find value, and that's where our investors benefit.</p>
+    <div class="ey">About the Firm</div>
+    <h2 class="h-sec incised">Everstone Capital</h2>
+    <p>Everstone Capital is a private real estate investment firm focused on acquiring and repositioning multifamily assets across select high-growth US markets. We identify undervalued properties with clear operational upside, then execute on it through disciplined capital allocation and active asset management.</p>
+    <p>We apply an institutional underwriting process to middle-market deals — the segment most institutional capital overlooks. That's where we find value, and that's where our investors benefit.</p>
   </div>
   <div class="pillars">
-    <div class="pillar"><h3>Process-driven acquisitions</h3><p>Every deal goes through the same rigorous underwriting process before an offer is made.</p></div>
-    <div class="pillar"><h3>Investor alignment</h3><p>We invest alongside our partners. Our interests are aligned at every stage of the deal.</p></div>
-    <div class="pillar"><h3>Transparent reporting</h3><p>Regular financial and operational updates on every active investment.</p></div>
-    <div class="pillar"><h3>Capital discipline</h3><p>We walk away from deals that don't meet our return thresholds. Always.</p></div>
+    <div class="pillar"><div class="pk">01 — Process</div><h3>Process-driven acquisitions</h3><p>Every deal moves through the same rigorous underwriting before an offer is made.</p></div>
+    <div class="pillar"><div class="pk">02 — Alignment</div><h3>Investor alignment</h3><p>We invest alongside our partners. Our interests are aligned at every stage of the deal.</p></div>
+    <div class="pillar"><div class="pk">03 — Reporting</div><h3>Transparent reporting</h3><p>Regular financial and operational updates on every active investment.</p></div>
+    <div class="pillar"><div class="pk">04 — Discipline</div><h3>Capital discipline</h3><p>We walk away from deals that don't meet our return thresholds. Always.</p></div>
   </div>
 </div></section>
 
 <!-- INVESTORS / FORM -->
-<section id="investors" class="pad"><div class="wrap two-col">
-  <div class="form-col">
-    <div class="eyebrow">Investor Relations</div>
-    <h2 class="section-title">Request investor information</h2>
-    <p class="desc">We work with a select group of investors on each acquisition. Complete the form to receive our investor overview and be considered for future opportunities.</p>
-    <div class="min-note">Minimum investment $15,000. For accredited and non-accredited investors.</div>
+<section id="investors" class="section alt rv"><div class="wrap two">
+  <div class="form-intro">
+    <div class="ey">Investor Relations</div>
+    <h2 class="h-sec incised">Request investor information.</h2>
+    <p class="lead">We work with a select group of investors on each acquisition. Share a few details to receive our investor overview and be considered for upcoming opportunities.</p>
+    <div class="min-note"><b>Minimum $15,000</b>Open to accredited and non-accredited investors.</div>
   </div>
   <div>
     <div class="form-box" id="lp-form">
       <div class="form-row">
-        <div class="fg"><label>First name</label><input type="text" id="firstName" placeholder="James" /></div>
-        <div class="fg"><label>Last name</label><input type="text" id="lastName" placeholder="Wilson" /></div>
+        <div class="fg"><label for="firstName">First name</label><input type="text" id="firstName" placeholder="James" autocomplete="given-name" /></div>
+        <div class="fg"><label for="lastName">Last name</label><input type="text" id="lastName" placeholder="Wilson" autocomplete="family-name" /></div>
       </div>
-      <div class="fg"><label>Email address</label><input type="email" id="email" placeholder="james@example.com" /></div>
-      <div class="fg"><label>Investable capital</label>
+      <div class="fg"><label for="email">Email address</label><input type="email" id="email" placeholder="james@example.com" autocomplete="email" /></div>
+      <div class="fg"><label for="capital">Investable capital</label>
         <select id="capital">
           <option value="$15K – $25K">$15K – $25K</option>
           <option value="$25K – $50K">$25K – $50K</option>
@@ -265,7 +476,7 @@
           <option value="$250K+">$250K+</option>
         </select>
       </div>
-      <div class="fg"><label>Accredited investor status</label>
+      <div class="fg"><label for="accredited">Accredited investor status</label>
         <select id="accredited">
           <option value="Yes">Yes — I'm accredited</option>
           <option value="No">No — I'm not accredited</option>
@@ -274,6 +485,7 @@
       <button class="form-submit" onclick="submitForm()">Submit inquiry</button>
     </div>
     <div class="form-success" id="form-success">
+      <div class="seal">Everstone Capital · Investor Relations</div>
       <h3>Inquiry received</h3>
       <p>Our team will be in touch shortly to discuss upcoming investment opportunities.</p>
     </div>
@@ -282,8 +494,14 @@
 
 <!-- FOOTER -->
 <footer><div class="wrap foot-in">
-  <div class="foot-logo">EVERSTONE CAPITAL<span>everstonemultifamily.com · tahric@everstonemultifamily.com</span></div>
-  <p class="disclaimer">This is not an offer to sell or solicitation to buy securities. All investments involve risk and may result in loss of principal. For accredited and non-accredited investors. Minimum investment $15,000.</p>
+  <div>
+    <div class="foot-mark">EVERST<span class="o">O</span>NE CAPITAL</div>
+    <div class="foot-contact">
+      everstonemultifamily.com<br>
+      <a href="mailto:tahric@everstonemultifamily.com">tahric@everstonemultifamily.com</a>
+    </div>
+  </div>
+  <p class="disclaimer">This is not an offer to sell or a solicitation to buy securities. All investments involve risk and may result in loss of principal. Targeted returns are estimates at underwriting and are not guaranteed. Open to accredited and non-accredited investors. Minimum investment $15,000.</p>
 </div></footer>
 
 <script>
@@ -296,7 +514,7 @@ async function submitForm(){
   const email=document.getElementById('email').value.trim();
   const capital=document.getElementById('capital').value;
   const accredited=document.getElementById('accredited').value;
-  if(!firstName||!lastName||!email){alert('Please fill in your name and email.');return;}
+  if(!firstName||!lastName||!email){alert('Please add your name and email so we can follow up.');return;}
   const btn=document.querySelector('.form-submit');
   btn.textContent='Submitting…';btn.style.opacity='0.7';
   try{
@@ -318,6 +536,12 @@ async function submitForm(){
   document.getElementById('lp-form').style.display='none';
   document.getElementById('form-success').style.display='block';
 }
+
+// scroll reveal
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
