@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-03T19:50:31",
+ "updated": "2026-07-03T19:55:25",
  "deals": [
   {
    "name": "Galesburg Townhomes",
@@ -134,8 +134,8 @@
    "units": null,
    "asset": "Value-Add Multifamily",
    "coc": "7\u20138%",
-   "irr": "8%+",
-   "em": "1.4x",
+   "irr": "10%+",
+   "em": "1.5x",
    "afford": null,
    "afford_tier": null,
    "photo": null,
