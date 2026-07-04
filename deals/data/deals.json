@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-03T20:00:39",
+ "updated": "2026-07-03T20:05:33",
  "deals": [
   {
    "name": "Galesburg Townhomes",
@@ -8,7 +8,7 @@
    "units": 24,
    "asset": "Value-Add Multifamily",
    "coc": "7\u20138%",
-   "irr": "9%+",
+   "irr": "10%+",
    "em": "1.5x",
    "afford": 22,
    "afford_tier": "good",
@@ -28,20 +28,6 @@
    "afford_tier": "good",
    "photo": "img/arch-ave-apartments.jpg",
    "thesis": "Arch Ave Apartments is a 10-unit value-add multifamily asset in Oldsmar, FL. Value-add opportunity for strategic interior upgrades including modernized kitchens with shaker-style cabinetry, granite or quartz countertops, contemporary fixtures, and stainless-st"
-  },
-  {
-   "name": "Atlas Apartments",
-   "slug": "atlas-apartments",
-   "market": "Richmond, IN",
-   "units": 67,
-   "asset": "Value-Add Multifamily",
-   "coc": "7\u20138%",
-   "irr": "8%+",
-   "em": "1.4x",
-   "afford": 17,
-   "afford_tier": "good",
-   "photo": "img/atlas-apartments.jpg",
-   "thesis": "Atlas Apartments is a 67-unit value-add multifamily asset in Richmond, IN. 40+ units rehabbed with updated interiors, plumbing (PEX and PVC), wiring (upgraded to copper), windows (double pane Low-E vinyl frames). Over 20 HVAC units replaced. The remaining reno"
   },
   {
    "name": "Straley Apartments",
@@ -120,8 +106,8 @@
    "units": 40,
    "asset": "Value-Add Multifamily",
    "coc": "7\u20138%",
-   "irr": "11%+",
-   "em": "1.6x",
+   "irr": "10%+",
+   "em": "1.5x",
    "afford": 34,
    "afford_tier": "high",
    "photo": "img/urban-square-apartments.jpg",
