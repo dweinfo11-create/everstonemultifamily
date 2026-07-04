@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-03T19:55:25",
+ "updated": "2026-07-03T20:00:39",
  "deals": [
   {
    "name": "Galesburg Townhomes",
@@ -58,6 +58,20 @@
    "thesis": "Straley Apartments is a 32-unit value-add multifamily asset in Paulding, OH. Property is primed for value-add interior unit renovations. Rent comparables show 1BR units 33.75% below market and 2BR units 30.62% below market, supporting substantial revenue growt"
   },
   {
+   "name": "Volrath Apartments",
+   "slug": "volrath-apartments",
+   "market": "Indianapolis, IN",
+   "units": 22,
+   "asset": "Value-Add Multifamily",
+   "coc": "7\u20138%",
+   "irr": "32%+",
+   "em": "3.8x",
+   "afford": 20,
+   "afford_tier": "good",
+   "photo": "img/volrath-apartments.jpg",
+   "thesis": "Volrath is a 22-unit value-add multifamily asset in Indianapolis, IN. Value-add opportunity through rent growth and operational optimization. Studio and 1-bedroom units exhibit rent gaps exceeding 35% below market, creating runway for revenue growth through in"
+  },
+  {
    "name": "Peachtree Apartments",
    "slug": "peachtree-apartments",
    "market": "Cocoa, FL",
@@ -106,8 +120,8 @@
    "units": 40,
    "asset": "Value-Add Multifamily",
    "coc": "7\u20138%",
-   "irr": "10%+",
-   "em": "1.5x",
+   "irr": "11%+",
+   "em": "1.6x",
    "afford": 34,
    "afford_tier": "high",
    "photo": "img/urban-square-apartments.jpg",
